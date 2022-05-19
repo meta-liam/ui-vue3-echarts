@@ -1,21 +1,25 @@
 <template>
-  <!-- <HelloWorld msg="HelloWorld"></HelloWorld> -->
-  <LinkChannel msg="link"></LinkChannel>
+     <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/demo1">About</router-link> |
+      <router-link to="/demo2">Contact</router-link>
+    </nav>
+    <main>
+      <router-view />
+    </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import LinkChannel from './components/LinkChannel.vue'
-import { reactive, toRefs, computed, onBeforeMount, onMounted } from 'vue'
-
-export default {
-  name: 'App',
-  components: {
-    LinkChannel
-    //HelloWorld
-  },
-  setup() {
-  }
-
-}
+export default {}
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
