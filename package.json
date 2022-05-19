@@ -1,0 +1,19 @@
+{
+  "name": "vue3-vite-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-legacy": "^1.7.1",
+    "@vitejs/plugin-vue": "^2.2.4",
+    "link-node": "^1.0.2",
+    "vue": "^3.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5",
+    "vite": "^2.8.6"
+  }
+}
