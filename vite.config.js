@@ -24,4 +24,10 @@ export default defineConfig({
 			additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
 		}),
 	],
+  server: {
+    host: '0.0.0.0',
+    port: 3010,
+    // 是否开启 https : false true
+    https: false,
+  },
 });

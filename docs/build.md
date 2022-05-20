@@ -13,3 +13,7 @@ from origin 'null' has been blocked by CORS policy: Cross origin requests are on
 ## 用file打开的包
 
 npm run build 后，手工处理 index.html,去掉无用js,参考build/index-参考.html
+
+## Chrome本地跨域origin-null-is-not-allowed问题分析与解决方案
+
+https://wdd.js.org/posts/2018/origin-null-is-not-allowed/
