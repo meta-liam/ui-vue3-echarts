@@ -9,3 +9,7 @@ from origin 'null' has been blocked by CORS policy: Cross origin requests are on
 ```
 
 [参考](https://blog.csdn.net/qq_37193972/article/details/122535933)
+
+## 用file打开的包
+
+npm run build 后，手工处理 index.html,去掉无用js,参考build/index-参考.html
