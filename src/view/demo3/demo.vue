@@ -1,21 +1,24 @@
 <template>
-  <ChartLine :chart_option="data_option" chart_id="charts_line1"></ChartLine>
+  <div class="container_chart3">
+    <Chart :chart_option="data_option" chart_id="charts_id1" chart_class="chart_class1"></Chart>
+    <Chart :chart_option="data_option" chart_id="charts_id2" chart_class="chart_class1"></Chart>
+    <Chart :chart_option="data_option" chart_id="charts_id3" chart_class="chart_class1"></Chart>
+  </div>
 
   <div class="buttonBox">
     <button @click="client_event(true)">start</button>
     <button @click="client_event(false)">Change</button>
   </div>
-  <div>{{ data_option }}</div>
 </template>
 
 <script>
 import { onMounted, ref } from 'vue'
-import ChartLine from '../components/Line.vue'
+import Chart from '../components/Chart.vue'
 
 export default {
   name: 'Demo1',
   components: {
-    ChartLine,
+    Chart,
   },
   props: {
   },
@@ -91,6 +94,14 @@ export default {
 </script>
 
 <style>
+.container_chart3 .chart_class1 {
+  float: left;
+  width: 33.3vw;
+  height: 40vh;
+  padding: 0;
+  margin: 0;
+}
+
 .buttonBox {
   float: left;
   clear: both;

@@ -1,0 +1,63 @@
+<template>
+    <div :id="chart_id" class="chart_line">
+    </div>
+</template>
+
+<script>
+import { onBeforeUnmount, onMounted } from 'vue'
+import * as echarts from 'echarts';
+
+
+export default {
+  name: 'ChartLine',
+  props: {
+    chart_option: {},
+    chart_id:{
+      default:'charts_line'
+      },
+  },
+  methods: {
+  },
+  setup(props) {
+    //console.log("props chart_id:", props.chart_option);
+    let myChart;
+    const init_chart = () => {
+      // 基于准备好的dom，初始化echarts实例
+      myChart = echarts.init(document.getElementById(props.chart_id));
+    }
+    const callBackUpdate = (db) => {
+      //console.log("s call-db:", db);
+      // 绘制图表
+      myChart.setOption(db);
+    }
+    onBeforeUnmount(() => {
+      //console.log("L run:onBeforeUnmount");
+      myChart.dispose();
+    })
+    onMounted(() => {
+      //console.log("L run:onMounted");
+      init_chart();
+      if(props.chart_option )callBackUpdate(props.chart_option);
+    })
+    return { callBackUpdate }
+  },
+
+  // 监听数据变化
+  watch: {
+    chart_option(newValue, oldValue) {
+      //console.log('newValue:', newValue)
+      if (newValue && oldValue !== newValue) {
+        this.callBackUpdate(newValue);
+      }
+    },
+  },
+
+}
+</script>
+
+<style>
+.chart_line {
+  width: 50vw;
+  height: 50vh;
+}
+</style>
