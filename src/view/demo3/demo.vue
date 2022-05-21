@@ -14,6 +14,9 @@
 <script>
 import { onMounted, ref } from 'vue'
 import Chart from '../components/Chart.vue'
+import category from '../../data/charts/category.ts'
+import db_line1 from '../../data/line1.ts'
+import db_line2 from '../../data/line2.ts'
 
 export default {
   name: 'Demo1',
@@ -24,68 +27,17 @@ export default {
   },
   setup() {
     //console.log("context:",context)
-    let line_option3 = {
-      title: {
-        text: 'ECharts 入门示例3'
-      },
-      tooltip: {},
-      xAxis: {
-        data: ['衬衫C', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-      },
-      yAxis: {},
-      series: [
-        {
-          name: '销量',
-          type: 'bar',
-          data: [35, 20, 36, 10, 10, 20]
-        }
-      ]
-    };
-    let line_option2 = {
-      title: {
-        text: 'ECharts 入门示例2'
-      },
-      tooltip: {},
-      xAxis: {
-        data: ['衬衫B', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-      },
-      yAxis: {},
-      series: [
-        {
-          name: '销量',
-          type: 'bar',
-          data: [25, 20, 36, 10, 10, 20]
-        }
-      ]
-    };
-    let line_option1 = {
-      title: {
-        text: 'ECharts 入门示例1'
-      },
-      tooltip: {},
-      xAxis: {
-        data: ['衬衫A', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-      },
-      yAxis: {},
-      series: [
-        {
-          name: '销量',
-          type: 'bar',
-          data: [15, 20, 36, 10, 10, 20]
-        }
-      ]
-    };
     const data_option = ref({});
     const client_event = (v) => {
       if (v) {
-        data_option.value = line_option2
+        data_option.value = category
       } else {
-        data_option.value = line_option3
+        data_option.value = db_line2
       }
     }
     onMounted(() => {
-      //console.log("F run:onMounted");
-      data_option.value = line_option1;
+      //console.log("F run:onMounted category:",category);
+      data_option.value = db_line1;
     })
     return { client_event, data_option }
   },
@@ -100,18 +52,5 @@ export default {
   height: 40vh;
   padding: 0;
   margin: 0;
-}
-
-.buttonBox {
-  float: left;
-  clear: both;
-  margin-bottom: 10px;
-}
-
-.buttonBox button {
-  float: left;
-  line-height: 150%;
-  font-size: 14px;
-  margin: 4px 6px;
 }
 </style>

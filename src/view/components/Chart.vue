@@ -53,3 +53,10 @@ export default {
   },
 }
 </script>
+
+<style>
+.chart_class {
+  width: 30vw;
+  height: 30vh;
+}
+</style>

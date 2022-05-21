@@ -22,7 +22,15 @@ body {
   padding: 0;
 }
 
-.chart_class {
-  width: 30vw;
-  height: 30vh;
+.buttonBox {
+  float: left;
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.buttonBox button {
+  float: left;
+  line-height: 150%;
+  font-size: 14px;
+  margin: 4px 6px;
 }

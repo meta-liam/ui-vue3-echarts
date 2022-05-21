@@ -16,14 +16,19 @@ export default () => createRouter({
       component: () => import('../view/demo1/demo1.vue')
     },
     {
+      path: '/demo2',
+      name: 'Demo2',
+      component: () => import('../view/demo2/demo2.vue')
+    },
+    {
       path: '/demo3',
       name: 'Demo3',
       component: () => import('../view/demo3/demo.vue')
     },
     {
-      path: '/demo2',
-      name: 'Demo2',
-      component: () => import('../view/demo2/demo2.vue')
+      path: '/demo4',
+      name: 'Demo4',
+      component: () => import('../view/demo4/demo.vue')
     },
   ]
 })
