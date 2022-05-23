@@ -30,31 +30,15 @@ export default () => createRouter({
       name: 'Demo4',
       component: () => import('../view/demo4/demo.vue')
     },
+    {
+      path: '/demo5',
+      name: 'Demo5',
+      component: () => import('../view/demo5/demo.vue')
+    },
+    {
+      path: '/map_cn',
+      name: 'Demo_Map',
+      component: () => import('../view/map_cn/demo.vue')
+    },
   ]
 })
-
-// const routes = [
-//   {
-//     path: '/',
-//     name: 'Home',
-//     // redirect: '/about',
-//     component: () => import('@/view/demo1/demo1'),
-//     // children: [...homeRouter],
-//   },
-//   {
-//     path: '/demo2',
-//     name: 'demo2',
-//     component: () => import('@/view/demo2/demo2'),
-//   },
-//   {
-//     path: '/demo1',
-//     name: 'demo1',
-//     component: () => import('@/view/demo1/demo1'),
-//   },
-//   {
-//     redirect: '/404',
-//     path: '/:pathMatch(.*)',
-//   },
-// ]
-
-// export default routes

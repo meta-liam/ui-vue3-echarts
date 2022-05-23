@@ -67,9 +67,9 @@ export default {
 <style>
 .container_chart4 .chart_class1 {
   float: left;
-  width: 33vw;
+  width: 32vw;
   height: 30vh;
   padding: 0;
-  margin: 0.14vw;
+  margin: 0.12vw;
 }
 </style>
